@@ -1,0 +1,5 @@
+db_password        = "changeme123"
+backend_image_tag  = "v1"
+frontend_image_tag = "v1"
+namespace          = "myapp"
+ingress_host       = "myapp.local"

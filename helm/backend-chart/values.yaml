@@ -1,0 +1,35 @@
+replicaCount: 1
+
+image:
+  repository: myapp-backend
+  tag: "v1"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 5000
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+
+postgresql:
+  enabled: true
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/postgresql
+    tag: 16.3.0-debian-12-r23
+  auth:
+    username: appuser
+    password: apppassword
+    database: appdb
+  primary:
+    persistence:
+      enabled: false
+  service:
+    ports:
+      postgresql: 5432

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Todo App — Minikube + Helm + Terraform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Todo List</h1>
+    <p class="subtitle">Frontend (Nginx) &rarr; Backend (Node/Express) &rarr; Postgres, deployed via Helm + Terraform on Minikube</p>
+
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Add a new task..." required />
+      <button type="submit">Add</button>
+    </form>
+
+    <ul id="todo-list"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
